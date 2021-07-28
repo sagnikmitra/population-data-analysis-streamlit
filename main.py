@@ -6,6 +6,7 @@ pop = pd.read_excel('pop.xlsx')
 exp = pxl.load_workbook('pop.xlsx')
 sheet = exp['PCA']
 stateList = []
+st.title('Population Analysis (States - India)')
 for i in range(2, sheet.max_row+1):
     if(sheet.cell(row=i, column=8).value != 'India'):
         stateList.append(sheet.cell(row=i, column=8).value)
